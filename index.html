@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style media="screen">
+      body {
+        background-image: url("https://media.istockphoto.com/vectors/seamless-texture-of-old-blue-stone-background-stone-wall-tiles-vector-vector-id1137030852?k=6&m=1137030852&s=170667a&w=0&h=Sp_WXsJ0Z1RF_MR_f8TNitCeBIPCFnoEDZdiyHLRZpE=");
+        background-color: #cccccc;
+        opacity: 9;
+        color: #ffffff;
+        font: 20px/20px sans-serif;
+      }
+
+      #logaritmisch1 {
+        margin: 100px;
+        padding: 15px;
+        border: 4mm ridge #00BCD4;
+        border-width: 25px;
+
+      }.logaritmisch1{
+
+      }
+      #logaritmisch2{
+        margin: 100px;
+        padding: 15px;
+        border:  4mm ridge #00BCD4;
+        border-width: 25px;
+      }
+
+      .display{
+        border: 4mm ridge rgba(170, 50, 220, .6);
+        border-width: 25px;
+
+
+      }
+
+
+    </style>
+    <meta charset="utf-8">
+    <title>Convert1.1</title>
+  </head>
+  <body>
+
+    <div  class="logaritmisch1">
+      <label for="logaritmisch1">log-->decibel</label>
+
+      <input type="number" id="logaritmisch1" name="logaritmisch1"onchange="convert(this)"style="
+      margin-top: 20px
+      ">
+    </div>
+
+    <div  class="logaritmisch2">
+      <label for="logaritmisch2">Decibel-->log</label>
+
+      <input type="number" id="logaritmisch2" name="logaritmisch2"onchange="convert2(this)" style="
+      margin-top: 10px
+      ">
+    </div>
+
+<p id="display"style="
+margin-top: 20px;
+
+"> waarde:</p>
+
+    <script type="text/javascript">
+function convert(id){
+  document.getElementById("display").innerHTML = "lineare waarde:"+Math.pow(10,id.value);
+}
+function convert2(id){
+  document.getElementById("display").innerHTML = "logaritmische waarde:"+Math.log10(id.value);
+}
+    </script>
+
+
+
+
+  </body>
+</html>
